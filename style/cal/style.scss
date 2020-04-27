@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+
+*{
+    font-family: 'Montserrat';
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #F8A78A;
+}
+.calculator{
+    position: relative;
+    display: grid;
+    .value{
+        grid-column: span 4;
+        height: 100px;
+        text-align: right;
+        background: #cccccc;
+        border: none;
+        outline: none;
+        padding: 10px;
+        font-size: 18px;
+    }
+    span{
+        display: grid;
+        width: 60px;
+        height: 60px;
+        color: #FFF;
+        background: #A8D3C4;
+        place-items: center;
+    }
+    span:active{
+        background: #F8A78A;
+        color: #111;
+
+    }
+    span.clear{
+        grid-column: span 2;
+        width: 120px;
+    }
+    span.plus{
+        grid-row: span 2;
+        height: 120px;
+    }
+}

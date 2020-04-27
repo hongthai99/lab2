@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+body, html {
+  font-family: 'Montserrat';
+  margin: 0;
+  padding: 0;
+}
+
+.timer {
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.timer .anologclock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.timer .anologclock .anologclock::before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  color: #000;
+  border-radius: 50%;
+  z-index: 10000;
+}
+
+.timer .anologclock .analoghour, .timer .anologclock .analogsecond, .timer .anologclock .analogminute {
+  position: absolute;
+  top: 31%;
+}
+
+.timer .anologclock .analoghour, .timer .anologclock .hr {
+  width: 360px;
+  height: 360px;
+}
+
+.timer .anologclock .analogminute, .timer .anologclock .min {
+  width: 360px;
+  height: 360px;
+}
+
+.timer .anologclock .analogsecond, .timer .anologclock .scond {
+  width: 360px;
+  height: 360px;
+}
+
+.timer .anologclock .hr, .timer .anologclock .scond, .timer .anologclock .min {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+}
+
+.timer .anologclock .hr::before {
+  content: '';
+  width: 10px;
+  height: 200px;
+  background: #FFF;
+  z-index: 0;
+  border-radius: 6px;
+}
+
+.timer .anologclock .min::before {
+  content: '';
+  width: 8px;
+  height: 200px;
+  background: #F8A78A;
+  z-index: 0;
+  border-radius: 6px;
+}
+
+.timer .anologclock .scond::before {
+  content: '';
+  width: 6px;
+  height: 200px;
+  background: #F8A78A;
+  z-index: 20;
+  border-radius: 6px;
+}
+
+.timer h2 {
+  position: absolute;
+  font-size: 40px;
+  top: 10%;
+  left: 41%;
+  transition: -50%, -50%;
+  color: #2e1f4f;
+}
+
+.timer .o2021 {
+  margin-top: 2em;
+  left: 23%;
+}
+
+.timer .countdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 76%;
+  left: 22%;
+}
+
+.timer .countdown div {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  background: #ff6e61;
+  color: #2e1f4f;
+  margin: 0 15px;
+  font-size: 5em;
+  font-weight: bold;
+}
+
+.timer .countdown div:before {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  width: 100%;
+  height: 35px;
+  color: #333;
+  font-size: 0.35em;
+  line-height: 35px;
+  font-weight: bold;
+}
+
+.timer .countdown div#day:before {
+  content: 'DAY';
+}
+
+.timer .countdown div#hour:before {
+  content: 'HOUR';
+}
+
+.timer .countdown div#minute:before {
+  content: 'MINUTE';
+}
+
+.timer .countdown div#second:before {
+  content: 'SECOND';
+}
+
+.timer .bongbay {
+  position: absolute;
+  width: 90%;
+  left: 5%;
+  top: 20%;
+  -webkit-animation: uptodown 3s ease-in-out infinite alternate;
+          animation: uptodown 3s ease-in-out infinite alternate;
+}
+
+.timer .item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0%;
+  top: 0%;
+  -webkit-animation: uptodown 5s ease-in-out infinite alternate;
+          animation: uptodown 5s ease-in-out infinite alternate;
+}
+
+.timer p {
+  position: absolute;
+  top: 99%;
+  left: 42%;
+  font-size: 0.7em;
+}
+
+.timer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  left: 42%;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.timer ul li {
+  list-style: none;
+  margin-left: 30px;
+  text-decoration: none;
+}
+
+@-webkit-keyframes uptodown {
+  from {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateX(20deg);
+            transform: rotateX(20deg);
+    -webkit-transform: rotateY(20deg);
+            transform: rotateY(20deg);
+  }
+}
+
+@keyframes uptodown {
+  from {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateX(20deg);
+            transform: rotateX(20deg);
+    -webkit-transform: rotateY(20deg);
+            transform: rotateY(20deg);
+  }
+}
+/*# sourceMappingURL=clock.css.map */
